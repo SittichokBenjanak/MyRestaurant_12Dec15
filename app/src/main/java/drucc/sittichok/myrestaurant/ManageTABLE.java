@@ -41,7 +41,7 @@ public class ManageTABLE {
 
             String[] strResult = null;
             Cursor objCursor = reidSqLiteDatabase.query(TABLE_USER,
-                    new String[]{COLUMN_id_,COLUMN_User,COLUMN_Name},
+                    new String[]{COLUMN_id_,COLUMN_User,COLUMN_Password,COLUMN_Name},
                     COLUMN_User + "=?",
                     new String[]{String.valueOf(strUser)},
                     null,null,null,null);
