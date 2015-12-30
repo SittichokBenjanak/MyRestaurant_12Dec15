@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     //Explicit
     private ManageTABLE objManageTABLE;
     private EditText userEditText, passwordEditText;
+    /* สร้างตัวแปล userEditText, passwordEditText
+    ที่มีชนิดข้อมูล เป็น EditText เพื่อรองรับข้อมูลการใส่ id กับ password ของลูกค้า*/
     private String userString, passwordString;
 
     @Override
@@ -42,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
 
         //Tester Add Value
         //testerAddValue();
-
 
         //Delete All SQLite
         deleteAllSQLite();
@@ -210,7 +211,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void deleteAllSQLite() {
 
-        SQLiteDatabase objSqLiteDatabase = openOrCreateDatabase("Restaurant.db", MODE_PRIVATE,null);
+               SQLiteDatabase objSqLiteDatabase = openOrCreateDatabase("Restaurant.db", MODE_PRIVATE,null);
         objSqLiteDatabase.delete("userTABLE",null,null);
         objSqLiteDatabase.delete("foodTABLE", null, null);
 
